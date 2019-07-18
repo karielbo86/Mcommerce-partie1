@@ -2,6 +2,7 @@ package com.ecommerce.microcommerce.web.controller;
 
 import com.ecommerce.microcommerce.dao.ProductDao;
 import com.ecommerce.microcommerce.model.Product;
+import com.ecommerce.microcommerce.web.exceptions.ProduitGratuitException;
 import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
@@ -74,6 +75,9 @@ public class ProductController {
         if (productAdded == null)
             return ResponseEntity.noContent().build();
 
+        if (product.getPrix()==0)
+            return ResponseEntity.badRequest().build();
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
@@ -110,12 +114,19 @@ public class ProductController {
         int marge =  0;
         String margeS =  new String();
         for(Product p : produits){
-
+            if(p.getPrix()==0) throw new ProduitGratuitException("Le produit avec l'id " + p.getId() + " est gratuit, aucune marge");
             marge = p.getPrix()-p.getPrixAchat();
             margeS += p.toString() + ":" + marge + " ,\n" ;
             marge = 0;
         }
         return margeS;
+    }
+
+    @GetMapping(value = "/TriProduits")
+    public List<Product> TriProduits(){
+
+        return productDao.findAllByOrderByNomAsc();
+
     }
 
 
