@@ -103,6 +103,21 @@ public class ProductController {
         return productDao.chercherUnProduitCher(400);
     }
 
+    @GetMapping(value = "/AdminProduits")
+    public String calculerMargeProduit() {
+        //t marge = product
+        List<Product> produits = productDao.findAll();
+        int marge =  0;
+        String margeS =  new String();
+        for(Product p : produits){
+
+            marge = p.getPrix()-p.getPrixAchat();
+            margeS += p.toString() + ":" + marge + " ,\n" ;
+            marge = 0;
+        }
+        return margeS;
+    }
+
 
 
 }
