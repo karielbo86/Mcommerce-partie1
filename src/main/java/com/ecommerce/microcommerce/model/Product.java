@@ -25,11 +25,11 @@ public class Product {
     //information que nous ne souhaitons pas exposer
     private int prixAchat;
 
-    //constructeur par défaut
+    //constructeur par défaut  ....
     public Product() {
     }
 
-    //constructeur pour nos tests
+    //constructeur pour nos tests  ...
     public Product(int id, String nom, int prix, int prixAchat) {
         this.id = id;
         this.nom = nom;
