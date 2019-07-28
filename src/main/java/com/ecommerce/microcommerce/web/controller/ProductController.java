@@ -32,7 +32,6 @@ public class ProductController {
     //Récupérer la liste des produits
 
     @RequestMapping(value = "/Produits", method = RequestMethod.GET)
-
     public MappingJacksonValue listeProduits() {
 
         Iterable<Product> produits = productDao.findAll();
@@ -52,7 +51,6 @@ public class ProductController {
     //Récupérer un produit par son Id
     @ApiOperation(value = "Récupère un produit grâce à son ID à condition que celui-ci soit en stock!")
     @GetMapping(value = "/Produits/{id}")
-
     public Product afficherUnProduit(@PathVariable int id) {
 
         Product produit = productDao.findById(id);
@@ -62,12 +60,8 @@ public class ProductController {
         return produit;
     }
 
-
-
-
     //ajouter un produit
     @PostMapping(value = "/Produits")
-
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product) {
 
         Product productAdded =  productDao.save(product);
@@ -76,7 +70,7 @@ public class ProductController {
             return ResponseEntity.noContent().build();
 
         if (product.getPrix()==0)
-            return ResponseEntity.badRequest().build();
+            throw new ProduitGratuitException("Le produit avec l'id " + product.getId() + " est gratuit.");
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -114,7 +108,6 @@ public class ProductController {
         int marge =  0;
         String margeS =  new String();
         for(Product p : produits){
-            if(p.getPrix()==0) throw new ProduitGratuitException("Le produit avec l'id " + p.getId() + " est gratuit, aucune marge");
             marge = p.getPrix()-p.getPrixAchat();
             margeS += p.toString() + ":" + marge + " ,\n" ;
             marge = 0;
