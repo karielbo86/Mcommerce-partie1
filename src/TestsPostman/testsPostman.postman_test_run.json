@@ -1,0 +1,367 @@
+{
+	"id": "513b77f8-807b-4744-991c-f8bc550b810e",
+	"name": "testsPostman",
+	"allTests": [],
+	"timestamp": "2019-07-28T21:29:31.031Z",
+	"collection_id": "9da88f70-88d2-4773-8261-68dacbe5c0e1",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "9da88f70-88d2-4773-8261-68dacbe5c0e1",
+		"name": "testsPostman",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"f9e5df94-f266-417d-8d91-5946877d86c4",
+			"2be9189e-dba8-4713-9140-0f969856eaf0",
+			"caf245d5-0447-4538-a117-7408b5505a96",
+			"516f98bf-51cc-4083-b0aa-18011a4fe58a",
+			"5407f096-4d6e-4700-bcd3-05a96f77a15b",
+			"2e51d89c-bc39-4c6e-aa6f-e4f5bc178f7e",
+			"dd5f6821-fdd4-4fc6-a8ec-8444b6f63c2c",
+			"9c1e2153-fac7-43e3-bade-51e04d1ca7be"
+		],
+		"folders_order": [],
+		"owner": "8102659",
+		"favorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "listeProduits",
+			"id": "f9e5df94-f266-417d-8d91-5946877d86c4",
+			"url": "http://localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "TriProduits",
+			"id": "2be9189e-dba8-4713-9140-0f969856eaf0",
+			"url": "http://localhost:9090/TriProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "afficherUnProduit",
+			"id": "caf245d5-0447-4538-a117-7408b5505a96",
+			"url": "http://localhost:9090/Produits/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "afficherUnProduitInconnu",
+			"id": "516f98bf-51cc-4083-b0aa-18011a4fe58a",
+			"url": "http://localhost:9090/Produits/255",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "ajouterProduit",
+			"id": "5407f096-4d6e-4700-bcd3-05a96f77a15b",
+			"url": "http://localhost:9090/Produits/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "ajouterUnProduitPrixNull",
+			"id": "2e51d89c-bc39-4c6e-aa6f-e4f5bc178f7e",
+			"url": "http://localhost:9090/Produits/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
+		},
+		{
+			"name": "listeProduits Copy",
+			"id": "dd5f6821-fdd4-4fc6-a8ec-8444b6f63c2c",
+			"url": "http://localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "calculerMargeProduit",
+			"id": "9c1e2153-fac7-43e3-bade-51e04d1ca7be",
+			"url": "http://localhost:9090/AdminProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 68,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "listeProduits",
+			"id": "f9e5df94-f266-417d-8d91-5946877d86c4",
+			"url": "http://localhost:9090/Produits",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "TriProduits",
+			"id": "2be9189e-dba8-4713-9140-0f969856eaf0",
+			"url": "http://localhost:9090/TriProduits",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "afficherUnProduit",
+			"id": "caf245d5-0447-4538-a117-7408b5505a96",
+			"url": "http://localhost:9090/Produits/1",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "afficherUnProduitInconnu",
+			"id": "516f98bf-51cc-4083-b0aa-18011a4fe58a",
+			"url": "http://localhost:9090/Produits/255",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "ajouterProduit",
+			"id": "5407f096-4d6e-4700-bcd3-05a96f77a15b",
+			"url": "http://localhost:9090/Produits/",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "ajouterUnProduitPrixNull",
+			"id": "2e51d89c-bc39-4c6e-aa6f-e4f5bc178f7e",
+			"url": "http://localhost:9090/Produits/",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "listeProduits Copy",
+			"id": "dd5f6821-fdd4-4fc6-a8ec-8444b6f63c2c",
+			"url": "http://localhost:9090/Produits",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "calculerMargeProduit",
+			"id": "9c1e2153-fac7-43e3-bade-51e04d1ca7be",
+			"url": "http://localhost:9090/AdminProduits",
+			"time": "2019-07-28T21:29:31.031Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
++
